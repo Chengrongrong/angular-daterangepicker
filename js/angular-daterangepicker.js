@@ -161,6 +161,8 @@
               objValue.startDate = x[0] ? x[0].startOf('day') : null;
               objValue.endDate = x[1] ? x[1].endOf('day') : null;
             }
+          }else if(angular.isString(val) && val.length == 0){
+            if(opts.singleDatePicker){ objValue = null; }
           }
           return objValue;
         });
